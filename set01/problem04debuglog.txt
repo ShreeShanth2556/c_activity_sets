@@ -17,61 +17,64 @@ Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.exe...
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 16528.0x764]
+[New Thread 5984.0x181c]
 warning: Can not parse XML library list; XML support was disabled at compile time
-Enter the value of a
-2
-Enter the value of b
+enter the value of a
+4
+enter the value of b
+[Thread 5984.0x181c exited with code 0]
 5
-The sum of 2 and 5 is 7[Thread 16528.0x764 exited with code 0]
-[Inferior 1 (process 16528) exited normally]
+the sum of 4 and 5 is 9[Inferior 1 (process 5984) exited normally]
 (gdb) l
-1       //2. Write a C program to add two numbers.
-2       #include<stdio.h>
-3       int main()
-4       {
-5           int a,b,sum;
-6           printf("Enter the value of a\n");
-7           scanf("%d",&a);
-8           printf("Enter the value of b\n");
-9           scanf("%d",&b);
-10          sum=a+b;
+11          printf("enter the value of b\n");
+12          scanf("%d",b);
+13      }
+14      void add(int a, int b, int *sum)
+15      {
+16          *sum=a+b;
+17      }
+18      void output(int a, int b, int sum)
+19      {
+20          printf("the sum of %d and %d is %d",a,b,sum);
 (gdb) b 2
-Breakpoint 1 at 0x7ff7b3e115ef: file .\problem02.c, line 6.
+Breakpoint 1 at 0x7ff67ddc15f2: file .\problem04.c, line 9.
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 10952.0x2f78]
+[New Thread 6824.0x2c04]
 
-Thread 1 hit Breakpoint 1, main () at .\problem02.c:6
-6           printf("Enter the value of a\n");
+Thread 1 hit Breakpoint 1, input (a=0xbcc29ff96c, b=0xbcc29ff968) at .\problem04.c:9
+9           printf("enter the value of a\n");
 (gdb) n
-Enter the value of a
-7           scanf("%d",&a);
+enter the value of a
+10          scanf("%d",a);
 (gdb) n
-5
-8           printf("Enter the value of b\n");
+
+^S[Thread 6824.0x2c04 exited with code 0]                                                                                                   
+
+
+5 
+11          printf("enter the value of b\n");
 (gdb) n
-Enter the value of b
-9           scanf("%d",&b);
+enter the value of b
+12          scanf("%d",b);
 (gdb) n
-7
-10          sum=a+b;
-(gdb) n
-11          printf("The sum of %d and %d is %d",a,b,sum);
-(gdb) n
-The sum of 5 and 7 is 1212          return 0;
-(gdb) n
+4 
 13      }
 (gdb) n
-0x00007ff7b3e113c1 in __tmainCRTStartup ()
+main () at .\problem04.c:26
+26          add(a,b,&sum);
+(gdb) n
+27          output(a,b,sum);
+(gdb) n
+the sum of 5 and 4 is 928           return 0;
+(gdb) n
+29      }
+(gdb) n
+0x00007ff67ddc13c1 in __tmainCRTStartup ()
 (gdb) n
 Single stepping until exit from function __tmainCRTStartup,
 which has no line number information.
-[Thread 10952.0x2f78 exited with code 0]
-[Inferior 1 (process 10952) exited normally]
+[Inferior 1 (process 6824) exited normally]
 (gdb) n
 The program is not being run.
 (gdb) q
-
-
-

@@ -17,61 +17,60 @@ Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.exe...
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 16528.0x764]
+[New Thread 5192.0x1b30]
 warning: Can not parse XML library list; XML support was disabled at compile time
-Enter the value of a
-2
-Enter the value of b
+enter the value
 5
-The sum of 2 and 5 is 7[Thread 16528.0x764 exited with code 0]
-[Inferior 1 (process 16528) exited normally]
+enter the value
+6
+enter the value
+7
+the largest of 5, 6 and 7 is 7[Thread 5192.0x1b30 exited with code 0]
+[Inferior 1 (process 5192) exited normally]
 (gdb) l
-1       //2. Write a C program to add two numbers.
+1       //Write a C program to compare three numbers using **pass by value**
 2       #include<stdio.h>
-3       int main()
-4       {
-5           int a,b,sum;
-6           printf("Enter the value of a\n");
-7           scanf("%d",&a);
-8           printf("Enter the value of b\n");
-9           scanf("%d",&b);
-10          sum=a+b;
+3       int input();
+4       int compare(int a, int b, int c);
+5       void output(int a, int b, int c, int largest);
+6
+7       int main()
+8       {
+9           int a,b,c,largest;
+10          a=input();
 (gdb) b 2
-Breakpoint 1 at 0x7ff7b3e115ef: file .\problem02.c, line 6.
+Breakpoint 1 at 0x7ff78f6e15ef: file .\problem05.c, line 10.
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 10952.0x2f78]
+[New Thread 7032.0x2690]
 
-Thread 1 hit Breakpoint 1, main () at .\problem02.c:6
-6           printf("Enter the value of a\n");
+Thread 1 hit Breakpoint 1, main () at .\problem05.c:10
+10          a=input();
 (gdb) n
-Enter the value of a
-7           scanf("%d",&a);
-(gdb) n
-5
-8           printf("Enter the value of b\n");
-(gdb) n
-Enter the value of b
-9           scanf("%d",&b);
-(gdb) n
+enter the value
 7
-10          sum=a+b;
+11          b=input();
 (gdb) n
-11          printf("The sum of %d and %d is %d",a,b,sum);
+enter the value
+8
+12          c=input();
 (gdb) n
-The sum of 5 and 7 is 1212          return 0;
+enter the value
+8
+13          largest=compare(a,b,c);
 (gdb) n
-13      }
+14          output(a,b,c,largest);
 (gdb) n
-0x00007ff7b3e113c1 in __tmainCRTStartup ()
+the largest of 7, 8 and 8 is 815            return 0;
+(gdb) n
+16      }
+(gdb) n
+0x00007ff78f6e13c1 in __tmainCRTStartup ()
 (gdb) n
 Single stepping until exit from function __tmainCRTStartup,
 which has no line number information.
-[Thread 10952.0x2f78 exited with code 0]
-[Inferior 1 (process 10952) exited normally]
+[Thread 7032.0x2690 exited with code 0]
+[Inferior 1 (process 7032) exited normally]
 (gdb) n
 The program is not being run.
 (gdb) q
-
-
-
