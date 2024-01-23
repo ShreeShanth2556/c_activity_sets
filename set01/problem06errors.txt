@@ -1,0 +1,7 @@
+.\problem06.c: In function 'compare':
+.\problem06.c:31:12: warning: 'return' with a value, in function returning void
+   31 |     return largest;
+      |            ^~~~~~~
+.\problem06.c:17:6: note: declared here
+   17 | void compare(int a, int b, int c, int *largest)
+      |      ^~~~~~~
