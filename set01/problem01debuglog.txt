@@ -1,0 +1,96 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+--Type <RET> for more, q to quit, c to continue without paging--r
+
+
+
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 7632.0x30d0]
+warning: Can not parse XML library list; XML support was disabled at compile time
+Shreeshanth
+[Thread 7632.0x30d0 exited with code 0]
+
+
+
+
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+--Type <RET> for more, q to quit, c to continue without paging--n
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+warning: Can not parse XML library list; XML support was disabled at compile time
+[New Thread 4948.0x3548]
+Shreeshanth
+[Thread 4948.0x3548 exited with code 0]
+[Inferior 1 (process 4948) exited normally]
+(gdb) l
+1       // 1. Write a C program to print your name.
+2       #include<stdio.h>
+3       int main(){
+4           printf("Shreeshanth\n");
+5           return 0;
+6       }
+(gdb) /l
+Undefined command: "".  Try "help".
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 6100.0x1784]
+Shreeshanth
+[Thread 6100.0x1bf0 exited with code 0]
+[Inferior 1 (process 6100) exited normally]
+(gdb) n
+The program is not being run.
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 6040.0x2be4]
+Shreeshanth
+[Thread 6040.0x17f4 exited with code 0]
+[Inferior 1 (process 6040) exited normally]
+(gdb) l
+Line number 7 out of range; problem01.c has 6 lines.
+(gdb) l
+Line number 7 out of range; problem01.c has 6 lines.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 11024.0x2ee8]
+Shreeshanth
+[Thread 11024.0x2ee8 exited with code 0]
+[Inferior 1 (process 11024) exited normally]
+(gdb) l
+Line number 7 out of range; problem01.c has 6 lines.
+(gdb) q
