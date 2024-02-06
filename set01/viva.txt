@@ -1,0 +1,40 @@
+What is GCC?
+It is a C language compiler that converts c source file to executable.
+Preprocessor of gcc will process lines starting with #.
+
+What #?
+Lines to be filled by PP
+
+What is preprocessor?
+
+what is compiler? C to exe
+
+What is preprocessor
+
+What is effext of #include<stdio.h>
+
+//PP is a part of gcc(compiler)
+
+What is stdio.h> ?
+It is a header file containing function prototypes.
+
+What is function prototype?
+consists of return type, function name, list of arguements.
+
+What is the use of function prototype?
+used by compiler to check     is processing
+
+What is
+ int main()
+ {
+    printf("program statement\n");
+    return 0;
+ }
+ main is a function.
+ main returns an integer.
+ main is the starting point of a program.
+
+What is printf?
+print is a ______ function.
+What does return statement do?
+transfers control from called function to calling function.
