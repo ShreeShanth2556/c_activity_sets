@@ -19,11 +19,12 @@ int sum_n_nos(int n)
     {
         sum=sum+i;
     }
+   return sum; 
 }
 
 void output(int n, int sum)
 {
-    printf("The sum of %d and %d is %d",n,sum);
+    printf("The sum of %d natural numbers is %d",n,sum);
 }
 
 int main()
