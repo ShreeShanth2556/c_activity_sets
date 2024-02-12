@@ -1,0 +1,7 @@
+printf (__format=0x7ff728581000 "enter string 1") at c:/mingw/x86_64-w64-mingw32/include/stdio.h:371
+371       __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
+(gdb) n
+372       __retval = __mingw_vfprintf( stdout, __format, __local_argv );
+(gdb) step
+__acrt_iob_func (index=1) at ../../src/mingw-w64-crt/stdio/acrt_iob_func.c:11
+11      ../../src/mingw-w64-crt/stdio/acrt_iob_func.c: No such file or directory. 

@@ -1,0 +1,135 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+--Type <RET> for more, q to quit, c to continue without paging--
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 5852.0x1524]
+warning: Can not parse XML library list; XML support was disabled at compile time
+enter string 13
+enter string 2 6
+the largest string is 6[Thread 5852.0x1524 exited with code 0]
+[Inferior 1 (process 5852) exited normally]
+(gdb) b 2
+Breakpoint 1 at 0x7ff7285715f7: file .\problem10.c, line 10.
+(gdb)
+Note: breakpoint 1 also set at pc 0x7ff7285715f7.
+Breakpoint 2 at 0x7ff7285715f7: file .\problem10.c, line 10.
+(gdb) l
+1       //Write a C program to compare two strings, character by character.
+2       #include<stdio.h>
+3       void input_two_strings(char *string1, char *string2);
+4       int stringcompare(char *string1, char *string2);
+5       void output(char *string1, char *string2, int result);
+6       int main()
+7       {
+8           char string1[100],string2[100];
+9           int result;
+10          input_two_strings(string1,string2);
+(gdb)
+11          result=stringcompare(string1,string2);
+12          output(string1,string2,result);
+13      }
+14      void input_two_strings(char *string1, char *string2)
+15      {
+16          printf("enter string 1");
+17          scanf("%s",string1);
+18          printf("enter string 2 ");
+19          scanf("%s",string2);
+20      }
+(gdb)  
+21      int stringcompare(char *string1, char *string2)
+22      {
+23          int i,result=0;
+24          for(i=0;string1[i]==string2[i];i++);
+25
+26
+27          result=string1[i]-string2[i];
+28          return result;
+29      }
+30      void output(char *string1, char *string2, int result)
+(gdb)
+31      {
+32          if(result==-122)
+33          {
+34              printf("the strings are equal");
+35
+36
+37          }
+38          else if(result>=1)
+39          {
+40              printf("the largest string is %s",string1);
+(gdb) step
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 9332.0x32d4]
+
+Thread 1 hit Breakpoint 1, main () at .\problem10.c:10
+10          input_two_strings(string1,string2);
+(gdb)
+(gdb) n
+enter string 16
+enter string 2 8
+11          result=stringcompare(string1,string2);
+(gdb) n
+12          output(string1,string2,result);
+(gdb) n
+the largest string is 813       }
+(gdb) n
+0x00007ff7285713c1 in __tmainCRTStartup ()
+(gdb) step
+Single stepping until exit from function __tmainCRTStartup,
+which has no line number information.
+[Thread 9332.0x32d4 exited with code 0]
+[Inferior 1 (process 9332) exited normally]
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 3660.0x15a4]
+
+Thread 1 hit Breakpoint 1, main () at .\problem10.c:10
+10          input_two_strings(string1,string2);
+(gdb)
+(gdb) s
+input_two_strings (string1=0xb0a21ff9d0 "d+1xó\001", string2=0xb0a21ff960 "à+1xó\001") at .\problem10.c:16
+16          printf("enter string 1");
+(gdb) n
+enter string 117            scanf("%s",string1);
+(gdb) n
+step
+18          printf("enter string 2 ");
+(gdb)
+enter string 2 19           scanf("%s",string2);
+(gdb)
+step
+20      }
+(gdb)
+main () at .\problem10.c:11
+11          result=stringcompare(string1,string2);
+(gdb)
+12          output(string1,string2,result);
+(gdb)
+the largest string is step13    }
+(gdb)
+0x00007ff7285713c1 in __tmainCRTStartup ()
+(gdb)
+Single stepping until exit from function __tmainCRTStartup,
+which has no line number information.
+[Thread 3660.0x15a4 exited with code 0]
+[Inferior 1 (process 3660) exited normally]
+(gdb) quit

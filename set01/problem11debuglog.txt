@@ -17,45 +17,34 @@ Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.exe...
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 4616.0x133c]
 warning: Can not parse XML library list; XML support was disabled at compile time
-enter string 17
-enter string 2 5
-the largest string is 7[Thread 4616.0x133c exited with code 0]
-[Inferior 1 (process 4616) exited normally]
+[New Thread 9140.0xa28]
+enter string 16
+enter string 2 8 
+the largest string is 8[Thread 9140.0xa28 exited with code 0]
+[Inferior 1 (process 9140) exited normally]
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 11824.0x2914]
-enter string 13
-enter string 2 4
-the largest string is 4[Thread 11824.0x2914 exited with code 0]
-[Inferior 1 (process 11824) exited normally]
+[New Thread 10704.0x2300]
+enter string 17
+enter string 2 6
+the largest string is 7[Thread 10704.0x2300 exited with code 0]
+[Inferior 1 (process 10704) exited normally]
 (gdb) b 2
 Breakpoint 1 at 0x7ff7285715f7: file .\problem10.c, line 10.
 (gdb) r
 Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 1104.0x5f0]
+[New Thread 11216.0x1afc]
 
 Thread 1 hit Breakpoint 1, main () at .\problem10.c:10
 10          input_two_strings(string1,string2);
 (gdb) n
-enter string 13
+enter string 12
 enter string 2 5
 11          result=stringcompare(string1,string2);
-(gdb) n
-12          output(string1,string2,result);
-(gdb) n
-the largest string is 513       }
-(gdb) n
-0x00007ff7285713c1 in __tmainCRTStartup ()
-(gdb) step
-Single stepping until exit from function __tmainCRTStartup,
-which has no line number information.
-[Thread 1104.0x5f0 exited with code 0]
-[Inferior 1 (process 1104) exited normally]
-(gdb) s
-The program is not being run.
 (gdb) l
+6       int main()
+7       {
 8           char string1[100],string2[100];
 9           int result;
 10          input_two_strings(string1,string2);
@@ -64,22 +53,44 @@ The program is not being run.
 13      }
 14      void input_two_strings(char *string1, char *string2)
 15      {
-16          printf("enter string 1");
-17          scanf("%s",string1);
 (gdb) step
-The program is not being run.
-(gdb) r
-Starting program: E:\Git\c_activity_sets\set01\a.exe
-[New Thread 6160.0x9bc]
-
-Thread 1 hit Breakpoint 1, main () at .\problem10.c:10
-10          input_two_strings(string1,string2);
-(gdb) step
-input_two_strings (string1=0x71455ffa90 "d+rûP\002", string2=0x71455ffa20 "à+rûP\002") at .\problem10.c:16
-16          printf("enter string 1");
+stringcompare (string1=0x2409fffda0 "2", string2=0x2409fffd30 "5") at .\problem10.c:23
+23          int i,result=0;
 (gdb)
-printf (__format=0x7ff728581000 "enter string 1") at c:/mingw/x86_64-w64-mingw32/include/stdio.h:371
-371       __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
+24          for(i=0;string1[i]==string2[i];i++);
+(gdb)
+27          result=string1[i]-string2[i];
+(gdb)
+28          return result;
+(gdb)
+29      }
+(gdb)
+main () at .\problem10.c:12
+12          output(string1,string2,result);
+(gdb)
+output (string1=0x2409fffda0 "2", string2=0x2409fffd30 "5", result=-3) at .\problem10.c:32
+32          if(result==-122)
+(gdb)
+38          else if(result>=1)
+(gdb)
+42          else if(result<=-1)
+(gdb)
+44              printf("the largest string is %s",string2);
+(gdb)
+printf (__format=0x7ff728581038 "the largest string is %s") at c:/mingw/x86_64-w64-mingw32/include/stdio.h:371
+371       __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format ); 
+(gdb) step
+372       __retval = __mingw_vfprintf( stdout, __format, __local_argv );
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) b main
+Note: breakpoint 1 also set at pc 0x7ff7285715f7.
+Breakpoint 2 at 0x7ff7285715f7: file .\problem10.c, line 10.
+(gdb) s
+__acrt_iob_func (index=1) at ../../src/mingw-w64-crt/stdio/acrt_iob_func.c:11
+11      ../../src/mingw-w64-crt/stdio/acrt_iob_func.c: No such file or directory.
 (gdb) r
 The program being debugged has been started already.
 Start it from the beginning? (y or n) n
@@ -87,6 +98,6 @@ Program not restarted.
 (gdb) quit
 A debugging session is active.
 
-        Inferior 1 [process 6160] will be killed.
+        Inferior 1 [process 11216] will be killed.
 
 Quit anyway? (y or n) y

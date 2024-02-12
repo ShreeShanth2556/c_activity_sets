@@ -1,0 +1,60 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+--Type <RET> for more, q to quit, c to continue without paging--r
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 9644.0x10c8]
+warning: Can not parse XML library list; XML support was disabled at compile time       
+enter the number4
+the square root of 4.000000 is 2.000000[Thread 9644.0x10c8 exited with code 0]
+[Inferior 1 (process 9644) exited normally]
+(gdb) b 2
+Breakpoint 1 at 0x7ff7f32e1740: file ../../src/mingw-w64-crt/crt/gccmain.c, line 21.    
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 6676.0x271c]
+enter the number6
+the square root of 6.000000 is 2.449490
+Thread 1 hit Breakpoint 1, __do_global_dtors () at ../../src/mingw-w64-crt/crt/gccmain.c:21
+21      ../../src/mingw-w64-crt/crt/gccmain.c: No such file or directory.
+(gdb) l
+16      in ../../src/mingw-w64-crt/crt/gccmain.c
+(gdb) step
+24      in ../../src/mingw-w64-crt/crt/gccmain.c
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 9992.0x32ac]
+enter the number5
+the square root of 5.000000 is 2.236069
+Thread 1 hit Breakpoint 1, __do_global_dtors () at ../../src/mingw-w64-crt/crt/gccmain.c:21
+21      in ../../src/mingw-w64-crt/crt/gccmain.c
+(gdb) 
+(gdb) s
+24      in ../../src/mingw-w64-crt/crt/gccmain.c
+(gdb) n
+0x00007ff819daddb1 in ?? ()
+(gdb) n
+Cannot find bounds of current function
+(gdb) n
+Cannot find bounds of current function
+(gdb) b 2
+Note: breakpoint 1 also set at pc 0x7ff7f32e1740.
+Breakpoint 2 at 0x7ff7f32e1740: file ../../src/mingw-w64-crt/crt/gccmain.c, line 21.    
+(gdb) l
+19      in ../../src/mingw-w64-crt/crt/gccmain.c

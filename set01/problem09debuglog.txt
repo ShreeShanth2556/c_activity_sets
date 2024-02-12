@@ -1,0 +1,86 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+--Type <RET> for more, q to quit, c to continue without paging--r
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 11060.0x35bc]
+warning: Can not parse XML library list; XML support was disabled at compile time
+enter the number5[Thread 11060.0x35bc exited with code 0]
+
+the square root of 5.000000 is 2.236069[Inferior 1 (process 11060) exited normally]
+(gdb)
+(gdb) N
+Undefined command: "N".  Try "help".
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 15288.0x450]
+enter the number6
+the square root of 6.000000 is 2.449490[Thread 15288.0x450 exited with code 0]
+[Inferior 1 (process 15288) exited normally]
+(gdb) b 2
+Breakpoint 1 at 0x7ff6506615ef: file .\problem09.c, line 9.
+(gdb) l
+1       //Write a C program to find the [square root] of a number.
+2       #include<stdio.h>
+3       float input();
+4       float square_root(float n);
+5       void output(float n, float sqrroot);
+6       int main()
+7       {
+8           float n,sqrroot;
+9           n=input();
+10          sqrroot=square_root(n);
+(gdb) b 2
+Note: breakpoint 1 also set at pc 0x7ff6506615ef.
+Breakpoint 2 at 0x7ff6506615ef: file .\problem09.c, line 9.
+(gdb) atep
+Undefined command: "atep".  Try "help".
+(gdb) step
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set01\a.exe
+[New Thread 2096.0x1ab0]
+
+Thread 1 hit Breakpoint 1, main () at .\problem09.c:9
+9           n=input();
+(gdb) step
+input () at .\problem09.c:17
+17          printf("enter the number");
+(gdb) n
+enter the number18          scanf("%f",&x);
+(gdb) n
+step
+19          return x;
+(gdb)
+21      }
+(gdb)
+main () at .\problem09.c:10
+10          sqrroot=square_root(n);
+(gdb)
+11          output(n,sqrroot);
+(gdb)
+the square root of 0.000000 is 0.00000012           return 0;
+(gdb) n
+13      }
+(gdb) step 
+0x00007ff6506613c1 in __tmainCRTStartup ()
+(gdb)
+Single stepping until exit from function __tmainCRTStartup,
+which has no line number information.
+[Thread 2096.0x1ab0 exited with code 0]
+[Inferior 1 (process 2096) exited normally]
+(gdb) quit
