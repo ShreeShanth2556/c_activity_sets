@@ -31,5 +31,5 @@ float square_root( float n)
 }
 void output(float n,float sqrroot)
 {
-    printf("the square root of %f is %f",n,sqrroot);
+    printf("The square root of %f is %f",n,sqrroot);
 }
