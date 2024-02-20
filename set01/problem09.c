@@ -14,7 +14,7 @@ int main()
 float input()
 {
     float x;
-    printf("enter the number");
+    printf("Enter the number");
     scanf("%f",&x);
     return x;
 
