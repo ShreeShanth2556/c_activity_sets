@@ -1,0 +1,92 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+--Type <RET> for more, q to quit, c to continue without paging--
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe
+[New Thread 2336.0x114c]
+warning: Can not parse XML library list; XML support was disabled at compile time
+Enter the base and height of a triangle 
+3
+5
+The area of the traingle with base 3.000000 and height 5.000000 is 7.500000[Thread 2336.0x114c exited with code 0]
+[Inferior 1 (process 2336) exited normally]
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe
+[New Thread 8716.0x1964]
+Enter the base and height of a triangle 
+5
+6
+The area of the traingle with base 5.000000 and height 6.000000 is 15.000000[Thread 8716.0x3f28 exited with code 0]
+[Inferior 1 (process 8716) exited normally]
+(gdb) l
+13
+14      void find_area(float base , float height, float *area)
+15      {
+16          *area = 0.5*(base * height);
+17      }
+18
+19      void output(float base, float height, float area)
+20      {
+21          printf("The area of the traingle with base %f and height %f is %f",base,height,area);
+22      }
+(gdb) b 2
+Breakpoint 1 at 0x7ff6fc8015f2: file .\problem01.c, line 10.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe
+[New Thread 13604.0x393c]
+
+Thread 1 hit Breakpoint 1, input (base=0x96b03ffc5c, height=0x96b03ffc58) at .\problem01.c:10
+10          printf("Enter the base and height of a triangle \n");
+(gdb)
+(gdb) n
+Enter the base and height of a triangle
+11          scanf("%f %f",base,height);
+(gdb) n
+step
+12      }
+(gdb) n
+main () at .\problem01.c:28
+28          find_area(base,height,&area);
+(gdb) n
+29          output(base,height,area);
+(gdb) n
+The area of the traingle with base 0.000000 and height 0.000000 is 0.00000030       return 0;
+(gdb) n
+31      }
+(gdb) n
+0x00007ff6fc8013c1 in __tmainCRTStartup ()
+(gdb) n
+Single stepping until exit from function __tmainCRTStartup,
+which has no line number information.
+[Thread 13604.0x393c exited with code 0]
+[Inferior 1 (process 13604) exited normally]
+(gdb) n
+The program is not being run.
+(gdb) s
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe 
+[New Thread 6488.0x1824]
+
+Thread 1 hit Breakpoint 1, input (base=0x7428bffb8c, height=0x7428bffb88) at .\problem01.c:10
+10          printf("Enter the base and height of a triangle \n");
+(gdb) quit
+A debugging session is active.
+
+        Inferior 1 [process 6488] will be killed.
+
+Quit anyway? (y or n) y
