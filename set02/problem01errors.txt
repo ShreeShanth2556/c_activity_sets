@@ -1,0 +1,12 @@
+.\problem01.c: In function 'output':
+.\problem01.c:21:12: warning: character constant too long for its type
+   21 |     printf('The area of the traingle with base %d and height %d is %d',base,height,area);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\problem01.c:21:12: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+   21 |     printf('The area of the traingle with base %d and height %d is %d',base,height,area);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |            |
+      |            int
+In file included from .\problem01.c:3:
+c:\mingw\x86_64-w64-mingw32\include\stdio.h:368:25: note: expected 'const char *' but argument is of type 'int'
+  368 | int printf (const char *__format, ...)
