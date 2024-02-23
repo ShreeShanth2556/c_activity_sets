@@ -17,14 +17,13 @@ int input_number()
 int is_composite(int n)
 {
     int i;
-    for(i=2;i<n;i++)
+    for (i = 2; i < n; i++)
     {
         if(n%i==0)
         {
             return 1;
         }
     }
-    
     return 0;
 }
 
@@ -32,11 +31,11 @@ void output(int n, int result)
 {
     if(result==1)
     {
-        printf("the number is composite");
+        printf("it is a composite number");
     }
     else
     {
-        printf("the number is not composite");
+        printf("it is not a composite number");
     }
 }
 
