@@ -17,25 +17,26 @@ int input_side()
 int check_scalene(int a, int b, int c)
 {
     int scalene;
-    if(a==b || b==c || c==a)
+    if(a!=b && b!=c && c!=a)
     {
-        scalene = 1;
+        scalene= 1;
     }
     else
     {
-        scalene = 2;
+        scalene= 0;
     }
     return scalene;
+    
 }
 
 void output(int a, int b, int c, int isscalene)
 {
     if(isscalene==1)
     {
-        printf("the trinagle is not scalene");
+        printf("the trinagle is scalene");
     }
     else{
-        printf("the triangle is scalene");
+        printf("the triangle is not  scalene");
     }
 }
 

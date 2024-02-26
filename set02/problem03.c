@@ -19,7 +19,7 @@ int is_composite(int n)
     int i;
     for (i = 2; i < n; i++)
     {
-        if(n%i==0)
+        if(n%i==0) // (%) to get the remainder
         {
             return 1;
         }
