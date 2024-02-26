@@ -1,0 +1,76 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+--Type <RET> for more, q to quit, c to continue without paging--
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe
+[New Thread 17788.0x36e0]
+warning: Can not parse XML library list; XML support was disabled at compile time
+enter the number 55
+It is a composite number[Thread 17788.0x36e0 exited with code 0]
+[Inferior 1 (process 17788) exited normally]
+(gdb) b 2
+Breakpoint 1 at 0x7ff6a76015ea: file .\problem03.c, line 12.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe
+[New Thread 17376.0x1728]
+
+Thread 1 hit Breakpoint 1, input_number () at .\problem03.c:12
+12          printf("enter the number ");
+(gdb) n
+enter the number 13         scanf("%d",&n);
+(gdb) n
+step
+14          return n;
+(gdb) n
+15      }
+(gdb) n
+main () at .\problem03.c:46
+46          result=is_composite(n);
+(gdb) n
+47          output(n,result);
+(gdb) n
+It is not a composite number48      return 0;
+(gdb) n
+49      }
+(gdb) n
+0x00007ff6a76013c1 in __tmainCRTStartup ()
+(gdb) n
+Single stepping until exit from function __tmainCRTStartup,
+which has no line number information.
+[Thread 17376.0x1728 exited with code 0]
+[Inferior 1 (process 17376) exited normally]
+(gdb) l
+44          int n,result;
+45          n=input_number();
+46          result=is_composite(n);
+47          output(n,result);
+48          return 0;
+49      }
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set02\a.exe
+[New Thread 14380.0x3c04]
+
+Thread 1 hit Breakpoint 1, input_number () at .\problem03.c:12
+12          printf("enter the number ");
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 14380] will be killed.
+
+Quit anyway? (y or n) y
