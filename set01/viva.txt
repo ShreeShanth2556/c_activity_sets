@@ -38,3 +38,5 @@ What is printf?
 print is a ______ function.
 What does return statement do?
 transfers control from called function to calling function.
+
+Array contains same type of datatypes while structures contains different types of datatypes in single type.
