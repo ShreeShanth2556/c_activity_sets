@@ -49,3 +49,24 @@ void output(int n,int a[n],int sum)
     }
     printf("%d = %d",a[n-1],sum);
 }
+
+// void output(int n, int a[n],int sum)
+// {
+//     printf("Numbers entered by the user ");
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ",a[i]);
+//     }
+//     printf("\nsum of the numbers :%d",sum);
+    
+// }
+
+
+
+// void output(int n, int a[n],int sum)
+// {
+//     {
+//         printf("sum is %d\n",sum);
+//     }
+    
+// }
