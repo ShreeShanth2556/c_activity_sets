@@ -26,7 +26,7 @@ int main()
 int input_n()
 {
     int x;
-    printf("enter the range");
+    printf("Enter the range");
     scanf("%d",&x);
     return x;
 
