@@ -36,7 +36,7 @@ void input_n_triangles(int n,Triangle t[n])
     int i;
     for(i=0;i<n;i++)
     {
-        printf("enter the base and height of the triangles\n");
+        printf("Enter the base and height of the triangles\n");
         scanf("%f %f",&t[i].base,&t[i].altitude);
 
     }
