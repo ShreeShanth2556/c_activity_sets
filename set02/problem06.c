@@ -45,5 +45,5 @@ void str_reverse(char *a)
         
 void output(char *a)
 {
-    printf("the reversed string is %s",a);
+    printf("The reversed string is %s",a);
 }
