@@ -19,7 +19,7 @@ int main()
 Triangle input_triangle()
 {
     Triangle x;
-    printf("enter the base and height of the triangle");
+    printf("Enter the base and height of the triangle");
     scanf("%f %f",&x.base,&x.altitude);
     return x;
 
