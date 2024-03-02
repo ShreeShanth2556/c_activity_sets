@@ -21,7 +21,7 @@ void output(float base, float height, float area)
     printf("The area of the traingle with base %f and height %f is %f",base,height,area);
 }
 
-int main()
+int main() //calling a function
 {
     float base,height,area;
     input(&base,&height);
