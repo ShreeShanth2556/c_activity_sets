@@ -1,0 +1,70 @@
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+--Type <RET> for more, q to quit, c to continue without paging--
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.exe...
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set03\a.exe
+[New Thread 7344.0x3588]
+warning: Can not parse XML library list; XML support was disabled at compile time
+enter point 15
+6
+enter point 27
+8
+the distance between the points (5.000000, 6.000000) and (7.000000,8.000000) is 2.828427[Thread 7344.0x3588 exited with code 0]
+[Inferior 1 (process 7344) exited normally]
+(gdb) b 2
+Breakpoint 1 at 0x7ff65a1f15ef: file .\problem01.c, line 10.
+(gdb) r
+Starting program: E:\Git\c_activity_sets\set03\a.exe
+[New Thread 14032.0x780]
+
+Thread 1 hit Breakpoint 1, main () at .\problem01.c:10
+10          input(&x1,&y1,&x2,&y2);
+(gdb) n
+enter point 16
+7
+enter point 28
+9
+11          distance=find_distance(x1,y1,x2,y2);
+(gdb) n
+12          output(x1,y1,x2,y2,distance);
+(gdb) n
+the distance between the points (6.000000, 7.000000) and (8.000000,9.000000) is 2.82842713          return 0;
+(gdb) n
+14      }
+(gdb) n
+0x00007ff65a1f13c1 in __tmainCRTStartup ()
+(gdb) n
+Single stepping until exit from function __tmainCRTStartup,
+which has no line number information.
+[Thread 14032.0x780 exited with code 0]
+[Inferior 1 (process 14032) exited normally]
+(gdb) n
+The program is not being run.
+(gdb) l
+9           float x1,x2,y1,y2,distance;
+10          input(&x1,&y1,&x2,&y2);
+11          distance=find_distance(x1,y1,x2,y2);
+12          output(x1,y1,x2,y2,distance);
+13          return 0;
+14      }
+15
+16      void input(float *x1, float *y1, float *x2, float *y2)
+17      {
+18          printf("enter point 1");
+(gdb) n
+The program is not being run.
+(gdb) q
